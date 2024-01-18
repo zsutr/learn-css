@@ -62,8 +62,18 @@ body {
 }
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column.side, .column.middle {
+@media screen and (min-width: 320px and max-width: 600px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .column.side {
+      order: 2;
+  }
+
+  column.middle {
+    order : 1;
     width: 100%;
   }
+  
 }
